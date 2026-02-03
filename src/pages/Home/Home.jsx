@@ -3,6 +3,7 @@ import Hero from '../../components/Hero/Hero';
 import Differentiator from '../../components/Differentiator/Differentiator';
 import Applications from '../../components/Applications/Applications';
 import Process from '../../components/Process/Process';
+import Materials from '../../components/Materials/Materials';
 import ClosingCTA from '../../components/ClosingCTA/ClosingCTA';
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
             <Differentiator />
             <Applications />
             <Process />
+            <Materials />
             <ClosingCTA />
         </div>
     );

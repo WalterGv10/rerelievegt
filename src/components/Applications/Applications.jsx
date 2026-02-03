@@ -1,65 +1,45 @@
 import SectionWrapper from '../shared/SectionWrapper';
 
 const applications = [
-    {
-        title: 'Arte y Escultura',
-        description: 'Obras monumentales para galerías, museos y espacios públicos.',
-        icon: '◆'
-    },
-    {
-        title: 'Arquitectura e Interiorismo',
-        description: 'Elementos decorativos, maquetas a escala real y piezas de diseño.',
-        icon: '◇'
-    },
-    {
-        title: 'Branding Físico',
-        description: 'Logotipos volumétricos, exhibidores y elementos de marca en 3D.',
-        icon: '○'
-    },
-    {
-        title: 'Prototipos Industriales',
-        description: 'Validación de diseño a escala real. Del concepto a la pieza funcional.',
-        icon: '□'
-    }
+    { title: 'Arte y Escultura', description: 'Obras monumentales para galerías y museos.', icon: '◆' },
+    { title: 'Arquitectura', description: 'Elementos decorativos y maquetas a escala.', icon: '◇' },
+    { title: 'Branding Físico', description: 'Logotipos volumétricos y exhibidores 3D.', icon: '○' },
+    { title: 'Prototipos', description: 'Validación de diseño a escala real.', icon: '□' }
 ];
 
 export default function Applications() {
     return (
         <SectionWrapper>
-            <div className="space-y-12 sm:space-y-16 md:space-y-20">
+            <div className="space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-16">
                 {/* Header */}
-                <div className="text-center space-y-4 sm:space-y-6">
-                    <h2 className="text-2xl sm:text-4xl md:text-5xl font-light text-white tracking-tight">
+                <div className="text-center space-y-2 sm:space-y-3 md:space-y-4">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-white tracking-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]">
                         Aplicaciones
                     </h2>
-                    <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto font-light">
+                    <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/80 max-w-2xl mx-auto font-normal drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)]">
                         Donde la escala marca la diferencia.
                     </p>
                 </div>
 
                 {/* Applications Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
                     {applications.map((app, index) => (
                         <div
                             key={index}
-                            className="group p-6 sm:p-8 md:p-10 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all duration-500 text-left"
+                            className="group p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl border border-white/20 bg-black/40 backdrop-blur-md hover:bg-black/50 hover:border-white/30 transition-all duration-500"
                         >
-                            <div className="flex items-start gap-4 sm:gap-6">
-                                {/* Icon */}
-                                <span className="text-2xl sm:text-3xl text-gray-500 group-hover:text-gray-300 transition-colors duration-500">
-                                    {app.icon}
-                                </span>
+                            {/* Icon */}
+                            <span className="block text-xl sm:text-2xl md:text-3xl text-white/70 group-hover:text-white transition-colors duration-500 mb-2 sm:mb-3 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+                                {app.icon}
+                            </span>
 
-                                {/* Content */}
-                                <div className="space-y-2 sm:space-y-3">
-                                    <h3 className="text-lg sm:text-xl md:text-2xl font-normal text-white group-hover:text-gray-100 transition-colors duration-300">
-                                        {app.title}
-                                    </h3>
-                                    <p className="text-sm sm:text-base text-gray-400 font-light leading-relaxed">
-                                        {app.description}
-                                    </p>
-                                </div>
-                            </div>
+                            {/* Content */}
+                            <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white mb-1 sm:mb-2 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+                                {app.title}
+                            </h3>
+                            <p className="text-[11px] sm:text-xs md:text-sm text-white/80 font-normal leading-relaxed">
+                                {app.description}
+                            </p>
                         </div>
                     ))}
                 </div>

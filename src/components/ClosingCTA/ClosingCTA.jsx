@@ -2,31 +2,31 @@ import SectionWrapper from '../shared/SectionWrapper';
 
 export default function ClosingCTA() {
     return (
-        <SectionWrapper className="min-h-[60vh] flex items-center">
-            <div className="w-full text-center space-y-8 sm:space-y-10 md:space-y-12">
+        <SectionWrapper className="flex items-center">
+            <div className="w-full text-center space-y-6 sm:space-y-8 md:space-y-10">
                 {/* Authority Statement */}
-                <div className="space-y-4 sm:space-y-6">
-                    <p className="text-sm sm:text-base text-gray-500 tracking-widest uppercase">
+                <div className="space-y-3 sm:space-y-4 md:space-y-5">
+                    <p className="text-[10px] sm:text-xs md:text-sm text-white/70 tracking-widest uppercase font-medium drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
                         ¿Listo para pensar en grande?
                     </p>
-                    <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight leading-tight max-w-4xl mx-auto">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light text-white tracking-tight leading-tight max-w-4xl mx-auto drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]">
                         Tu próximo proyecto{' '}
-                        <span className="font-normal bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                        <span className="font-semibold">
                             merece escala.
                         </span>
                     </h2>
                 </div>
 
                 {/* CTA */}
-                <div className="pt-4 sm:pt-6">
-                    <button className="px-10 sm:px-12 md:px-16 py-4 sm:py-5 border border-white/20 text-white font-light tracking-wide rounded-full hover:bg-white hover:text-black transition-all duration-500 text-sm sm:text-base">
+                <div className="pt-2 sm:pt-4">
+                    <button className="px-8 sm:px-10 md:px-12 lg:px-16 py-3 sm:py-4 md:py-5 border-2 border-white/40 bg-black/40 backdrop-blur-md text-white font-medium tracking-wide rounded-full hover:bg-white hover:text-black transition-all duration-500 text-sm sm:text-base drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
                         Conversemos
                     </button>
                 </div>
 
                 {/* Subtle tagline */}
-                <p className="text-xs sm:text-sm text-gray-500 font-light">
-                    Sin compromiso. Solo una conversación sobre posibilidades.
+                <p className="text-[10px] sm:text-xs md:text-sm text-white/70 font-normal drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+                    Sin compromiso. Solo posibilidades.
                 </p>
             </div>
         </SectionWrapper>

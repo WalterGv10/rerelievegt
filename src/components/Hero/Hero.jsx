@@ -1,34 +1,51 @@
+import TextType from '../TextType/TextType';
+
 export default function Hero() {
     return (
-        <section className="relative flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 py-16">
-            <div className="max-w-5xl w-full text-center space-y-8 sm:space-y-12 md:space-y-16">
+        <section className="relative flex flex-col items-center justify-center min-h-[100dvh] w-full container-padding text-center">
+            <div className="max-w-[90vw] w-full space-y-[var(--spacing-gap)]">
 
-                {/* Main Headline */}
-                <div className="space-y-4 sm:space-y-6">
-                    <p className="text-sm sm:text-base md:text-lg tracking-[0.3em] uppercase text-gray-400 font-light">
+                {/* Tagline */}
+                <div>
+                    <p className="text-fluid-small tracking-[0.3em] uppercase text-amber-200/90 font-medium drop-shadow-md">
                         Impresión 3D de gran formato
                     </p>
+                </div>
 
-                    <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-tight text-white">
-                        No imprimimos objetos.
-                        <br />
-                        <span className="font-normal bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
-                            Imprimimos presencia.
-                        </span>
+                {/* Main Headline */}
+                <div className="min-h-[12rem] sm:min-h-[16rem] flex items-center justify-center">
+                    <h1 className="text-fluid-hero font-light tracking-tight leading-[1.1] text-amber-100 drop-shadow-xl">
+                        <TextType
+                            text={[
+                                "No imprimimos objetos.",
+                                "Imprimimos presencia.",
+                                "Imprimimos escala.",
+                                "Imprimimos impacto."
+                            ]}
+                            typingSpeed={50}
+                            deletingSpeed={30}
+                            pauseDuration={2000}
+                            cursorCharacter="_"
+                            showCursor={true}
+                            variableSpeed={{ min: 60, max: 120 }}
+                            className="font-semibold bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent"
+                        />
                     </h1>
                 </div>
 
-                {/* Subtle tagline */}
-                <p className="text-base sm:text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
-                    Piezas monumentales. Precisión milimétrica. Presencia que transforma espacios.
-                </p>
+                {/* Subtitle */}
+                <div className="max-w-[60ch] mx-auto">
+                    <p className="text-fluid-body text-amber-100/90 font-normal leading-relaxed drop-shadow-lg">
+                        Piezas monumentales. Precisión milimétrica. Presencia que transforma espacios. <span className="opacity-70 italic text-[0.9em]">Pero también hacemos llaveros de bolsillo, al cliente lo que pida.</span>
+                    </p>
+                </div>
 
             </div>
 
             {/* Scroll Indicator */}
-            <div className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500">
-                <span className="text-xs tracking-widest uppercase">Descubre</span>
-                <div className="w-px h-8 bg-gradient-to-b from-gray-500 to-transparent animate-pulse" />
+            <div className="absolute bottom-[5vh] left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/70">
+                <span className="text-[10px] tracking-widest uppercase font-medium">Descubre</span>
+                <div className="w-px h-12 bg-gradient-to-b from-white/70 to-transparent animate-pulse" />
             </div>
         </section>
     );
