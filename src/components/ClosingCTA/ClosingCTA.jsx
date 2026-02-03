@@ -17,11 +17,15 @@ export default function ClosingCTA() {
                     </h2>
                 </div>
 
-                {/* CTA */}
                 <div className="pt-2 sm:pt-4">
-                    <button className="px-8 sm:px-10 md:px-12 lg:px-16 py-3 sm:py-4 md:py-5 border-2 border-white/40 bg-black/40 backdrop-blur-md text-white font-medium tracking-wide rounded-full hover:bg-white hover:text-black transition-all duration-500 text-sm sm:text-base drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+                    <a
+                        href="https://wa.me/50236850866?text=Hola%20RelieveGt,%20me%20interesa%20iniciar%20un%20proyecto%20a%20gran%20escala."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-8 sm:px-10 md:px-12 lg:px-16 py-3 sm:py-4 md:py-5 border-2 border-amber-100/40 bg-black/40 backdrop-blur-md text-amber-100 font-medium tracking-wide rounded-full hover:bg-amber-100 hover:text-black transition-all duration-500 text-sm sm:text-base drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+                    >
                         Conversemos
-                    </button>
+                    </a>
                 </div>
 
                 {/* Subtle tagline */}
