@@ -17,9 +17,6 @@ export default function Home() {
             />
 
             <Hero />
-            <div id="servicios" className="section-below-fold">
-                <Differentiator />
-            </div>
             <div className="section-below-fold">
                 <Applications />
             </div>

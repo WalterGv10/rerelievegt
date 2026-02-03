@@ -161,7 +161,7 @@ export default function Navbar() {
 
             {/* Mobile Menu - 100dvh for full mobile viewport */}
             <div
-                className={`lg:hidden fixed top-0 left-0 w-full h-[100dvh] bg-black/95 backdrop-blur-xl transition-all duration-500 z-40 flex flex-col items-center justify-center space-y-8 ${isOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-full'
+                className={`lg:hidden fixed top-0 left-0 w-full h-[100dvh] bg-black/95 backdrop-blur-xl transition-all duration-500 z-[100] flex flex-col items-center justify-center space-y-8 ${isOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-full'
                     }`}
             >
                 {/* Close Button (top right) */}
