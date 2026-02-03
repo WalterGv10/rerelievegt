@@ -4,7 +4,6 @@ import gsap from 'gsap';
 
 const navLinks = [
     { name: 'Inicio', path: '/' },
-    { name: 'Servicios', path: '/#servicios' },
     { name: 'Catálogo', path: '/catalogo' },
     { name: 'Funkos', path: '/funkos' },
     { name: 'Proceso', path: '/#proceso' },
@@ -87,6 +86,7 @@ export default function Navbar() {
                     {/* Logo - Fluid size */}
                     <Link
                         to="/"
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                         className="logo-nav text-fluid-h3 font-bold text-amber-100 tracking-tight drop-shadow-md hover:opacity-80 transition-opacity opacity-0"
                     >
                         RelieveGt

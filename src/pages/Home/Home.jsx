@@ -17,13 +17,13 @@ export default function Home() {
             />
 
             <Hero />
-            <div className="section-below-fold">
+            <div id="servicios" className="section-below-fold">
                 <Differentiator />
             </div>
             <div className="section-below-fold">
                 <Applications />
             </div>
-            <div className="section-below-fold">
+            <div id="proceso" className="section-below-fold">
                 <Process />
             </div>
             <div className="section-below-fold">

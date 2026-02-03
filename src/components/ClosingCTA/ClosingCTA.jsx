@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import SectionWrapper from '../shared/SectionWrapper';
 
 export default function ClosingCTA() {
@@ -18,12 +19,12 @@ export default function ClosingCTA() {
                 </div>
 
                 <div className="pt-2 sm:pt-4">
-                    <a
-                        href="/contacto"
+                    <Link
+                        to="/contacto"
                         className="inline-block px-8 sm:px-10 md:px-12 lg:px-16 py-3 sm:py-4 md:py-5 border-2 border-amber-100/40 bg-black/40 backdrop-blur-md text-amber-100 font-medium tracking-wide rounded-full hover:bg-amber-100 hover:text-black transition-all duration-500 text-sm sm:text-base drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
                     >
                         Hablemos de tu pieza
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Subtle tagline */}

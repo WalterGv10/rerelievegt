@@ -9,17 +9,37 @@ const Home = lazy(() => import('./pages/Home/Home'));
 const Catalog = lazy(() => import('./pages/Catalog/Catalog'));
 const Funkos = lazy(() => import('./pages/Funkos/Funkos'));
 const Contact = lazy(() => import('./pages/Contact/Contact'));
+const Footer = lazy(() => import('./components/Footer/Footer'));
 
 // Loading fallback
-const PageLoader = () => (
-    <div className="fixed inset-0 flex items-center justify-center bg-black z-[100]">
-        <div className="w-12 h-12 border-4 border-amber-100/20 border-t-amber-100 rounded-full animate-spin" />
-    </div>
-);
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+// Component to handle hash scrolling
+const ScrollToHash = () => {
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (hash) {
+            const id = hash.replace('#', '');
+            const element = document.getElementById(id);
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }, [hash]);
+
+    return null;
+};
 
 function App() {
     return (
         <div className="relative w-full min-h-screen font-sans antialiased text-amber-100 overflow-x-hidden">
+            <ScrollToHash />
             <div className="fixed inset-0 z-0">
                 <Waves
                     lineColor="#ffffff"
@@ -46,6 +66,7 @@ function App() {
                         <Route path="/funkos" element={<Funkos />} />
                         <Route path="/contacto" element={<Contact />} />
                     </Routes>
+                    <Footer />
                 </Suspense>
             </main>
         </div>

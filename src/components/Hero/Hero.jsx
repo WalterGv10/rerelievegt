@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import TextType from '../TextType/TextType';
 
 export default function Hero() {
@@ -38,6 +39,17 @@ export default function Hero() {
                     <p className="text-fluid-body text-amber-100/90 font-normal leading-relaxed drop-shadow-lg">
                         Piezas monumentales. Precisión milimétrica. Presencia que transforma espacios. <span className="opacity-70 italic text-[0.9em]">Pero también hacemos llaveros de bolsillo, al cliente lo que pida.</span>
                     </p>
+                </div>
+
+                {/* Main CTA */}
+                <div className="pt-6">
+                    <Link
+                        to="/contacto"
+                        className="cta-magnetic-hero group relative inline-flex items-center gap-3 px-10 py-4 bg-amber-100 text-black font-bold rounded-full hover:bg-white transition-all duration-500 shadow-[0_0_30px_rgba(255,251,235,0.3)] hover:shadow-[0_0_50px_rgba(255,251,235,0.5)] scale-100 hover:scale-105 cursor-pointer"
+                    >
+                        Conversemos
+                        <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </Link>
                 </div>
 
             </div>
