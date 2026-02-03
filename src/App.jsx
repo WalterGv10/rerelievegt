@@ -4,12 +4,13 @@ import Home from './pages/Home/Home';
 
 function App() {
   return (
-    <div className="relative w-full min-h-screen font-sans antialiased text-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <div className="relative w-full min-h-screen font-sans antialiased text-gray-200 bg-[#0a0a0a] overflow-x-hidden">
+      {/* Slower, darker background for a sober gallery atmosphere */}
       <Iridescence
-        color={[0.5, 0.6, 0.8]}
+        color={[0.1, 0.1, 0.12]}
         mouseReact={true}
-        amplitude={0.1}
-        speed={1}
+        amplitude={0.05}
+        speed={0.4}
       />
 
       <Routes>

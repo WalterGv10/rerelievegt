@@ -1,13 +1,23 @@
 @import "tailwindcss";
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@theme {
+  --color-brand-dark: #0a0a0a;
+  --color-brand-graphite: #1a1a1a;
+  --color-brand-concrete: #2c2c2c;
+  --color-brand-accent: #d4a373;
+  /* Warm amber/wood accent/warm light */
+  --font-display: 'Inter', sans-serif;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 300;
+  /* Lighter touch for gallery feel */
+
+  color-scheme: dark;
+  color: #e5e5e5;
+  background-color: #0a0a0a;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,8 +27,33 @@
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-color: #0a0a0a;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+.animate-monumental-in {
+  animation: monumentalIn 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes monumentalIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(1.02);
+    filter: blur(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
 }

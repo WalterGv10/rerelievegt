@@ -6,8 +6,8 @@ export default function Home() {
     return (
         <div className="relative z-10 text-white">
             <SEO
-                title="RelieveGt - Servicios de Impresión 3D"
-                description="Soluciones de impresión 3D a medida en Guatemala. Desde llaveros personalizados hasta prototipado industrial de gran escala."
+                title="RelieveGt | Impresión 3D Monumental"
+                description="No imprimimos objetos, imprimimos presencia. Especialistas en impresión 3D de gran formato para arte, arquitectura e industria en Guatemala."
                 name="RelieveGt"
                 type="website"
             />

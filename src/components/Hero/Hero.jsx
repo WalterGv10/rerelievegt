@@ -1,45 +1,48 @@
 export default function Hero() {
     return (
-        <section className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 py-12 sm:py-16">
-            <div className="max-w-5xl w-full space-y-6 sm:space-y-8 md:space-y-10">
-                {/* Badge */}
-                <div className="flex justify-center">
-                    <span className="inline-block py-2 px-4 sm:px-6 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-[10px] sm:text-xs md:text-sm font-semibold tracking-[0.2em] uppercase shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(59,130,246,0.4)] transition-shadow duration-500">
-                        Manufactura Futurista
-                    </span>
-                </div>
+        <section className="relative flex flex-col items-center justify-center min-h-[90vh] px-4 sm:px-6 py-20 overflow-hidden">
+            {/* Subtle lighting overlay to mimic gallery feel */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-black via-transparent to-white/5 pointer-events-none" />
 
-                {/* Title */}
-                <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter drop-shadow-2xl text-center">
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-cyan-100 to-blue-200 filter drop-shadow-lg">
-                        RelieveGt
-                    </span>
-                </h1>
+            <div className="max-w-6xl w-full space-y-12 sm:space-y-16 animate-monumental-in relative z-10">
+                <div className="space-y-6 sm:space-y-8 text-center">
+                    {/* Main Statement */}
+                    <h2 className="text-sm sm:text-base md:text-lg font-medium tracking-[0.4em] uppercase text-brand-accent/80 mb-4">
+                        Escala que impone presencia
+                    </h2>
 
-                {/* Copy */}
-                <div className="space-y-3 sm:space-y-4 md:space-y-6 text-center">
-                    <p className="text-base sm:text-lg md:text-2xl lg:text-3xl text-gray-100 max-w-4xl mx-auto font-light leading-relaxed drop-shadow-lg px-4">
-                        Materializa tus ideas con{' '}
-                        <span className="font-medium text-cyan-200 decoration-cyan-400/30 underline decoration-1 underline-offset-4">
-                            precisión atómica
+                    {/* Main Headline */}
+                    <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter leading-none select-none">
+                        <span className="block text-white">No imprimimos objetos.</span>
+                        <span className="block bg-clip-text text-transparent bg-gradient-to-b from-white to-white/20">
+                            Imprimimos presencia.
                         </span>
-                        .
+                    </h1>
+                </div>
+
+                {/* Supporting Copy */}
+                <div className="max-w-3xl mx-auto space-y-8 text-center">
+                    <p className="text-xl sm:text-2xl md:text-4xl font-light text-gray-400 tracking-tight leading-snug text-balance">
+                        “Cuando el tamaño importa, la impresión también.”
                     </p>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed drop-shadow-md px-4">
-                        Desde el prototipo hasta la producción masiva, redefinimos los límites de lo posible.
+
+                    <div className="h-px w-24 bg-brand-accent/30 mx-auto" />
+
+                    <p className="text-sm sm:text-base md:text-lg text-gray-500 uppercase tracking-widest leading-relaxed font-semibold">
+                        Monumental • Escultural • Industrial
                     </p>
                 </div>
 
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center pt-6 sm:pt-8 md:pt-10 px-4">
-                    <button className="w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 bg-white text-black font-bold rounded-full hover:bg-cyan-50 transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] text-sm sm:text-base">
-                        Cotizar Proyecto
-                    </button>
-                    <button className="w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 bg-white/5 border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all transform hover:scale-105 shadow-lg backdrop-blur-sm hover:border-white/40 text-sm sm:text-base">
-                        Nuestros Servicios
+                {/* CTA */}
+                <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+                    <button className="px-12 py-5 bg-white text-black font-bold uppercase tracking-widest text-xs hover:bg-white/90 transition-all transform hover:scale-105 shadow-2xl">
+                        Inicia un proyecto monumental
                     </button>
                 </div>
             </div>
+
+            {/* Side lighting effect */}
+            <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/5 to-transparent pointer-events-none" />
         </section>
     );
 }

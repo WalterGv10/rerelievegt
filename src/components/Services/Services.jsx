@@ -1,48 +1,82 @@
-const services = [
-    { title: 'Cabezones', icon: '🗿' },
-    { title: 'Esculturas', icon: '🎨' },
-    { title: 'Llaveros', icon: '🔑' },
-    { title: 'Recuerdos Corporativos', icon: '🎁' },
-    { title: 'Producción en Masa', icon: '⚙️' },
-    { title: 'Prototipos Personalizados', icon: '🧩' }
+const applications = [
+    {
+        title: 'Arte y Escultura',
+        desc: 'Piezas monumentales que transforman galerías y espacios públicos.',
+        icon: '🏛️'
+    },
+    {
+        title: 'Arquitectura e Interiorismo',
+        desc: 'Elementos funcionales y decorativos de gran escala que definen estructuras.',
+        icon: '📐'
+    },
+    {
+        title: 'Branding Físico',
+        desc: 'Piezas icónicas que materializan la identidad de marca con impacto absoluto.',
+        icon: '✨'
+    },
+    {
+        title: 'Prototipos Industriales',
+        desc: 'Validación de volumen y forma en escala 1:1 para ingeniería avanzada.',
+        icon: '🏭'
+    }
 ];
-
-function ServiceCard({ service, index }) {
-    return (
-        <div
-            className="group relative p-4 sm:p-6 md:p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]"
-        >
-            <div className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
-                {service.icon}
-            </div>
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-100 group-hover:text-cyan-200 transition-colors duration-300">
-                {service.title}
-            </h3>
-        </div>
-    );
-}
 
 export default function Services() {
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 py-12 sm:py-16">
-            <div className="max-w-6xl w-full space-y-8 sm:space-y-12 md:space-y-16">
-                {/* Section Header */}
-                <div className="text-center space-y-3 sm:space-y-4 md:space-y-6">
-                    <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight px-4">
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-200 to-blue-300">
-                            De la Idea a la Realidad Física
-                        </span>
-                    </h2>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-                        Especialistas en impresión 3D de grado industrial.
-                    </p>
+        <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 py-24 bg-[#0a0a0a]">
+            <div className="max-w-7xl w-full space-y-24">
+
+                {/* Differential Header */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div className="space-y-8">
+                        <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tighter leading-tight text-white">
+                            Escala Real.<br />
+                            Impacto Inevitable.
+                        </h2>
+                        <div className="w-20 h-1 bg-brand-accent" />
+                    </div>
+                    <div className="space-y-6">
+                        <p className="text-xl sm:text-2xl text-gray-400 font-light leading-relaxed">
+                            No hacemos miniaturas. Creamos proyectos que transforman espacios, proyectos que otros no pueden alcanzar por tamaño o complejidad.
+                        </p>
+                        <p className="text-lg text-brand-accent uppercase tracking-[0.2em] font-bold italic">
+                            "Competimos donde otros no llegan: en tamaño, presencia y carácter."
+                        </p>
+                    </div>
                 </div>
 
-                {/* Services Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
-                    {services.map((service, index) => (
-                        <ServiceCard key={index} service={service} index={index} />
+                {/* Applications Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
+                    {applications.map((app, index) => (
+                        <div
+                            key={index}
+                            className="group relative p-10 bg-[#121212] border border-white/5 hover:border-white/10 transition-all duration-700 overflow-hidden"
+                        >
+                            {/* Abstract hover background */}
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -mr-32 -mt-32 group-hover:bg-brand-accent/10 transition-colors duration-700" />
+
+                            <div className="relative z-10 space-y-6">
+                                <div className="text-4xl opacity-50">{app.icon}</div>
+                                <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                                    {app.title}
+                                </h3>
+                                <p className="text-gray-500 text-lg leading-relaxed max-w-md">
+                                    {app.desc}
+                                </p>
+                            </div>
+
+                            {/* Detail accent */}
+                            <div className="absolute bottom-0 left-0 w-full h-1 bg-white/5 group-hover:bg-brand-accent transition-all duration-700 transform scale-x-0 group-hover:scale-x-100 origin-left" />
+                        </div>
                     ))}
+                </div>
+
+                {/* Closing Frase Power */}
+                <div className="pt-24 text-center border-t border-white/5">
+                    <p className="text-2xl sm:text-4xl md:text-5xl font-extralight text-gray-600 italic leading-snug">
+                        Impresión 3D que domina el espacio, <br className="hidden sm:block" />
+                        redefiniendo los límites de lo posible.
+                    </p>
                 </div>
             </div>
         </section>
