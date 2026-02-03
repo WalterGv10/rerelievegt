@@ -44,7 +44,7 @@ function App() {
     return (
         <div className="relative w-full min-h-screen font-sans antialiased text-amber-100 overflow-x-hidden">
             <ScrollToHash />
-            <div className="fixed inset-0 z-0">
+            <div className="fixed inset-0 z-0 pointer-events-none">
                 <Waves
                     lineColor="#ffffff"
                     backgroundColor="rgba(36, 36, 36, 1)" // Matching home background
