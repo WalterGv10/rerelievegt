@@ -119,6 +119,7 @@ export default function Navbar() {
                             key={link.name}
                             to={link.path}
                             onClick={() => {
+                                setIsOpen(false); // Force close menu
                                 if (location.pathname === link.path) {
                                     window.scrollTo({ top: 0, behavior: 'smooth' });
                                 }
