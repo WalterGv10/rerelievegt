@@ -1,5 +1,5 @@
-import { lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { lazy, Suspense, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Waves from './components/Waves/Waves';
 import './styles/theme.css';
@@ -12,8 +12,11 @@ const Contact = lazy(() => import('./pages/Contact/Contact'));
 const Footer = lazy(() => import('./components/Footer/Footer'));
 
 // Loading fallback
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+const PageLoader = () => (
+    <div className="fixed inset-0 flex items-center justify-center bg-black z-[100]">
+        <div className="w-12 h-12 border-4 border-amber-100/20 border-t-amber-100 rounded-full animate-spin" />
+    </div>
+);
 
 // Component to handle hash scrolling
 const ScrollToHash = () => {

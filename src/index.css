@@ -24,13 +24,7 @@ body {
     /* Blacker background for contrast and efficiency */
 }
 
-/* Performance Utilities (Velocity Skill) */
-.section-below-fold {
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 500px;
-    /* Guess for section height */
-}
-
+/* Performance Utilities */
 .will-change-transform {
     will-change: transform;
 }

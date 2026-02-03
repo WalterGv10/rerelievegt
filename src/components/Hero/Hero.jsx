@@ -42,10 +42,10 @@ export default function Hero() {
                 </div>
 
                 {/* Main CTA */}
-                <div className="pt-6">
+                <div className="pt-6 relative z-20">
                     <Link
                         to="/contacto"
-                        className="cta-magnetic-hero group relative inline-flex items-center gap-3 px-10 py-4 bg-amber-100 text-black font-bold rounded-full hover:bg-white transition-all duration-500 shadow-[0_0_30px_rgba(255,251,235,0.3)] hover:shadow-[0_0_50px_rgba(255,251,235,0.5)] scale-100 hover:scale-105 cursor-pointer"
+                        className="cta-magnetic-hero group relative inline-flex items-center gap-3 px-10 py-4 bg-amber-100 text-black font-bold rounded-full hover:bg-white transition-all duration-500 shadow-[0_0_30px_rgba(255,251,235,0.3)] hover:shadow-[0_0_50px_rgba(255,251,235,0.5)] scale-100 hover:scale-105 cursor-pointer z-30"
                     >
                         Conversemos
                         <span className="group-hover:translate-x-1 transition-transform">→</span>

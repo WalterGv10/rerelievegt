@@ -14,21 +14,7 @@ export default function Catalog() {
     const gridRef = useRef(null);
 
     useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.from(".product-card-anim", {
-                y: 60,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.1,
-                ease: "power4.out",
-                scrollTrigger: {
-                    trigger: gridRef.current,
-                    start: "top 85%",
-                    toggleActions: "play none none reverse"
-                }
-            });
-        }, gridRef);
-        return () => ctx.revert();
+        // Animation temporarily disabled for debugging visibility
     }, []);
 
     // Bad Bunny Data
@@ -158,7 +144,7 @@ export default function Catalog() {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 lg:gap-8">
                         {products.map((product) => (
-                            <div key={product.id} className="product-card-anim opacity-0">
+                            <div key={product.id} className="product-card-anim">
                                 <ProductCard product={product} />
                             </div>
                         ))}

@@ -10,20 +10,7 @@ export default function ProductSpotlight({ title, description, images, align = '
     const contentRef = useRef(null);
 
     useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.from(contentRef.current, {
-                x: align === 'right' ? 60 : -60,
-                opacity: 0,
-                duration: 1.5,
-                ease: "power4.out",
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: "top 80%",
-                    toggleActions: "play none none reverse"
-                }
-            });
-        }, sectionRef);
-        return () => ctx.revert();
+        // Animation disabled for debugging visibility
     }, [align]);
 
     // Fill images array if it has few items to create a better circular effect

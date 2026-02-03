@@ -6,6 +6,8 @@
     height: 100%;
     overflow: hidden;
     background-color: transparent;
+    pointer-events: none;
+    /* Ensure it doesn't block clicks to content */
 }
 
 .waves-canvas {

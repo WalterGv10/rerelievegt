@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function CatalogClosing() {
     return (
         <section className="relative px-4 sm:px-6 py-12 sm:py-16 md:py-20">
@@ -22,13 +24,13 @@ export default function CatalogClosing() {
                 </div>
 
                 {/* CTA */}
-                <div className="pt-3 sm:pt-4 md:pt-6">
-                    <a
-                        href="/contacto"
-                        className="inline-block px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 py-3 sm:py-3.5 md:py-4 lg:py-5 border-2 border-white/40 bg-black/40 backdrop-blur-md text-white font-medium tracking-wide rounded-full hover:bg-white hover:text-black transition-all duration-500 text-xs sm:text-sm md:text-base drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+                <div className="pt-3 sm:pt-4 md:pt-6 relative z-20">
+                    <Link
+                        to="/contacto"
+                        className="inline-block px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 py-3 sm:py-3.5 md:py-4 lg:py-5 border-2 border-white/40 bg-black/40 backdrop-blur-md text-white font-medium tracking-wide rounded-full hover:bg-white hover:text-black transition-all duration-500 text-xs sm:text-sm md:text-base drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)] relative z-30"
                     >
                         Hablemos de tu pieza
-                    </a>
+                    </Link>
                 </div>
 
             </div>
