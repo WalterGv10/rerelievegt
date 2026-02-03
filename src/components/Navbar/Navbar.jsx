@@ -6,7 +6,7 @@ const navLinks = [
     { name: 'Servicios', path: '/#servicios' },
     { name: 'Catálogo', path: '/catalogo' },
     { name: 'Proceso', path: '/#proceso' },
-    { name: 'Contacto', path: '/#contacto' }
+    { name: 'Contacto', path: '/contacto' }
 ];
 
 export default function Navbar() {

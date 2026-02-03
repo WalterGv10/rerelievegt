@@ -2,9 +2,9 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import Catalog from './pages/Catalog/Catalog';
-import './styles/theme.css'; // Import fluid theme
-
-import Waves from './components/Waves/Waves'; // Import Waves
+import Contact from './pages/Contact/Contact';
+import Waves from './components/Waves/Waves';
+import './styles/theme.css';
 
 function App() {
     return (
@@ -31,6 +31,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/catalogo" element={<Catalog />} />
+                    <Route path="/contacto" element={<Contact />} />
                 </Routes>
             </main>
         </div>
