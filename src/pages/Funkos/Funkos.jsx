@@ -11,18 +11,22 @@ export default function Funkos() {
 
     // Highlight Data (Real User Images)
     const featuredFunkoImages = [
-        { image: '/catalog/funkos-showcase/leo.png', text: 'Mascotas' },
-        { image: '/catalog/funkos-showcase/antonella.png', text: 'Kids' },
-        { image: '/catalog/funkos-showcase/solye.png', text: 'Lifestyle' },
-        { image: '/catalog/funkos-showcase/west.png', text: 'Fandom' },
-        { image: '/catalog/funkos-showcase/cheche.png', text: 'Personal' },
+        { image: '/catalog/funkos-showcase/catalina.png', text: 'Catalina' },
+        { image: '/catalog/funkos-showcase/magda.png', text: 'Dra. Magda' },
+        { image: '/catalog/funkos-showcase/steven.png', text: 'Steven' },
+        { image: '/catalog/funkos-showcase/hawk.png', text: 'Hawk' },
+        { image: '/catalog/funkos-showcase/leo.png', text: 'Leo' },
+        { image: '/catalog/funkos-showcase/solye.png', text: 'Solye' },
+        { image: '/catalog/funkos-showcase/antonella.png', text: 'Antonella' },
+        { image: '/catalog/funkos-showcase/west.png', text: 'West' },
+        { image: '/catalog/funkos-showcase/cheche.png', text: 'Cheche' },
     ];
 
     return (
         <div className="relative z-10 text-amber-100 pt-16 sm:pt-20">
             <SEO
                 title="Funkos & Coleccionables - RelieveGt"
-                description="Crea tu propio Funko personalizado. Figuras únicas, cajas diseñadas a medida y calidad premium."
+                description="Personalización de funkitos en impresión 3D. Cada proyecto se construye a escala real. Hablemos de tu pieza."
                 name="RelieveGt"
                 type="website"
             />
@@ -33,9 +37,24 @@ export default function Funkos() {
                 <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tighter mb-6 text-white drop-shadow-2xl">
                     Funkos <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Gt</span>
                 </h1>
-                <p className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto mb-8">
-                    Tu personalidad, inmortalizada en formato coleccionable.
-                </p>
+
+                <div className="space-y-4 mb-8">
+                    <p className="text-xl sm:text-2xl text-white font-medium">
+                        Personalización de funkitos en impresión 3D 🧚🏼‍♀️🪄
+                    </p>
+                    <div className="space-y-2">
+                        <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+                            Cada proyecto se construye a escala real.<br />
+                            <span className="text-white font-semibold block mt-1">Hablemos de tu pieza</span>
+                        </p>
+                        <p className="text-white/60 text-sm italic">
+                            Envíanos tu imagen de referencia al DM para hacerte una propuesta.
+                        </p>
+                    </div>
+                    <p className="text-amber-400 font-bold tracking-wider text-xl uppercase">
+                        🚚 Envíos a toda Guate!
+                    </p>
+                </div>
 
                 <a
                     href="https://www.instagram.com/funkosgt_/"

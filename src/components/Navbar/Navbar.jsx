@@ -121,7 +121,7 @@ export default function Navbar() {
                 ))}
 
                 <Link
-                    to="/#contacto"
+                    to="/contacto"
                     className="mt-8 px-10 py-4 text-fluid-body font-medium text-black bg-white rounded-full hover:scale-105 transition-transform"
                 >
                     Cotizar Proyecto
