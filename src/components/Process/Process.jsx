@@ -1,10 +1,26 @@
 import SectionWrapper from '../shared/SectionWrapper';
 
 const steps = [
-    { number: '01', title: 'Concepto', description: 'Tu visión, nuestra interpretación' },
-    { number: '02', title: 'Ingeniería', description: 'Optimización para escala' },
-    { number: '03', title: 'Producción', description: 'Impresión capa por capa' },
-    { number: '04', title: 'Entrega', description: 'Acabado profesional' }
+    {
+        number: '01',
+        title: 'Concepto',
+        description: 'Evaluamos tu idea, sketch o archivo digital para determinar la viabilidad técnica y escala óptima.'
+    },
+    {
+        number: '02',
+        title: 'Ingeniería',
+        description: 'Modelado 3D avanzado y "slicing" personalizado para garantizar integridad estructural en piezas monumentales.'
+    },
+    {
+        number: '03',
+        title: 'Producción',
+        description: 'Impresión aditiva de alta precisión con materiales industriales de última generación (PLA+, PETG, Resina).'
+    },
+    {
+        number: '04',
+        title: 'Post-Proceso',
+        description: 'Acabados profesionales, lijado, sellado y pintura especializada para resultados estéticos de galería.'
+    }
 ];
 
 export default function Process() {

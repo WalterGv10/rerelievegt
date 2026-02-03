@@ -78,6 +78,16 @@ export const products = [
     { id: 26, name: 'Terminator', dimensions: '60cm altura', type: 'Busto Sci-Fi', detail: 'Daño de Batalla', image: '/catalog/terminator-bust.png', description: 'I\'ll be back.' },
     { id: 27, name: 'Smeagol', dimensions: '40cm altura', type: 'Fantasía', detail: 'Ojos Cristalinos', image: '/catalog/smeagol-bust.png', description: 'Mi precioso.' },
     { id: 28, name: 'Alien (Xenomorfo)', dimensions: '70cm largo', type: 'Terror Sci-Fi', detail: 'Negro Brillante', image: '/catalog/alien-bust.png', description: 'En el espacio nadie puede oír tus gritos.' },
+    {
+        id: 30,
+        name: 'Mega-Caricatura: Edición Influencer',
+        dimensions: '65cm altura',
+        type: 'Caricatura Volumétrica de Autor',
+        detail: 'Pintura Premium + Accesorios Símiles',
+        usage: 'Marketing Digital y Colecciones Privadas',
+        image: '/catalog/mega-caricatura-influencer/front.jpg',
+        description: 'Impacto visual absoluto. Una pieza que traduce la personalidad digital al mundo físico mediante técnicas avanzadas de post-procesado y modelado facial exagerado.'
+    },
 
     // Legacy
     {
@@ -91,6 +101,16 @@ export const products = [
         description: 'Captura de gestos y expresión a gran escala con precisión milimétrica.'
     },
     {
+        id: 31,
+        name: 'Cyber Fox Mask - LED Edition',
+        dimensions: 'Ajustable',
+        type: 'Wearable Tech Art',
+        detail: 'Facetas Espejadas + Iluminación RGB LED',
+        usage: 'Festivales, Performance y Colección Sci-Fi',
+        image: '/catalog/cyber-fox-mask/front.jpg',
+        description: 'La intersección entre la moda futurista y el arte poligonal. Una máscara de zorro espejada de gran impacto visual, integrada con un sistema de iluminación LED programable que reacciona al entorno.'
+    },
+    {
         id: 2,
         name: 'Logo Volumétrico',
         dimensions: '1.2m ancho',
@@ -99,5 +119,27 @@ export const products = [
         usage: 'Recepción y espacios comerciales',
         image: '/catalog/volumetric-logo.jpg',
         description: 'Tu marca en tres dimensiones. Presencia que no se olvida.'
+    },
+
+    // Funkos Sample Data
+    {
+        id: 40,
+        name: 'Funko Personalizado: Ejecutivo',
+        dimensions: '10cm - 20cm',
+        type: 'Funko',
+        detail: 'Caja Personalizada Incluida',
+        usage: 'Regalos Corporativos',
+        image: '/catalog/mega-caricatura-influencer/front.jpg', // Placeholder
+        description: 'Tu versión en formato coleccionable. Incluye diseño de caja 100% personalizada.'
+    },
+    {
+        id: 41,
+        name: 'Funko Artista: Edición Limitada',
+        dimensions: '15cm altura',
+        type: 'Funko',
+        detail: 'Acabado Metálico',
+        usage: 'Merchandising',
+        image: '/catalog/mega-caricatura-influencer/side.jpg', // Placeholder
+        description: 'Series limitadas para artistas y creadores de contenido.'
     }
 ];

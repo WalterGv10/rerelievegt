@@ -4,31 +4,31 @@ import { FaWhatsapp, FaInstagram, FaMapMarkerAlt, FaEnvelope } from 'react-icons
 export default function Contact() {
     const contactInfo = [
         {
-            icon: <FaWhatsapp className="w-8 h-8 md:w-10 md:h-10" />,
-            label: 'WhatsApp',
-            value: '+502 3685 0866',
-            href: 'https://wa.me/50236850866?text=Hola%20RelieveGt,%20me%20gustar%C3%ADa%20mas%20informaci%C3%B3n.',
-            color: 'hover:text-green-400'
-        },
-        {
             icon: <FaInstagram className="w-8 h-8 md:w-10 md:h-10" />,
-            label: 'Instagram',
+            label: 'Instagram Principal',
             value: '@relievegt',
             href: 'https://www.instagram.com/relievegt/',
             color: 'hover:text-pink-400'
         },
         {
-            icon: <FaEnvelope className="w-8 h-8 md:w-10 md:h-10" />,
-            label: 'Correo',
-            value: 'info@relievegt.com',
-            href: 'mailto:info@relievegt.com',
+            icon: <FaInstagram className="w-8 h-8 md:w-10 md:h-10" />,
+            label: 'Coleccionables & Funkos',
+            value: '@funkosgt_',
+            href: 'https://www.instagram.com/funkosgt_/',
             color: 'hover:text-amber-400'
         },
         {
-            icon: <FaMapMarkerAlt className="w-8 h-8 md:w-10 md:h-10" />,
-            label: 'Ubicación',
-            value: 'Guatemala City, GT',
-            href: '#',
+            icon: <FaWhatsapp className="w-8 h-8 md:w-10 md:h-10" />,
+            label: 'WhatsApp Pedidos',
+            value: '+502 3685 0866',
+            href: 'https://wa.me/50236850866?text=Hola%20RelieveGt,%20me%20gustar%C3%ADa%20mas%20informaci%C3%B3n.',
+            color: 'hover:text-green-400'
+        },
+        {
+            icon: <FaEnvelope className="w-8 h-8 md:w-10 md:h-10" />,
+            label: 'Correo Electrónico',
+            value: 'info@relievegt.com',
+            href: 'mailto:info@relievegt.com',
             color: 'hover:text-amber-400'
         }
     ];

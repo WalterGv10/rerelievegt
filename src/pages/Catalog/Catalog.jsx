@@ -42,6 +42,21 @@ export default function Catalog() {
         { image: '/catalog/lucky-cat/main.jpg', text: 'Neko' },
     ];
 
+    // Mega Influencer Data
+    const influencerImages = [
+        { image: '/catalog/mega-caricatura-influencer/front.jpg', text: 'Vibra' },
+        { image: '/catalog/mega-caricatura-influencer/side.jpg', text: 'Perfil' },
+        { image: '/catalog/mega-caricatura-influencer/action.jpg', text: 'Gente' },
+        { image: '/catalog/mega-caricatura-influencer/close.jpg', text: 'Detalle' },
+    ];
+
+    // Cyber Fox Data
+    const foxImages = [
+        { image: '/catalog/cyber-fox-mask/front.jpg', text: 'Neon' },
+        { image: '/catalog/cyber-fox-mask/side.jpg', text: 'Prism' },
+        { image: '/catalog/cyber-fox-mask/angle.jpg', text: 'Cyber' },
+    ];
+
     return (
         <div className="relative z-10 text-amber-100 pt-16 sm:pt-20">
             <SEO
@@ -57,6 +72,20 @@ export default function Catalog() {
             <div className="flex flex-col gap-12 sm:gap-24 pb-20">
 
                 <ProductSpotlight
+                    title="Cyber Fox Mask - LED Edition"
+                    description="Arte digital que puedes usar. Facetas que reflejan la realidad y luces LED que definen el futuro. Una pieza icónica para escenarios y colecciones exclusivas."
+                    images={foxImages}
+                    align="left"
+                />
+
+                <ProductSpotlight
+                    title="Mega-Caricatura: Edición Influencer"
+                    description="Personalidad llevada al extremo monumental. Acabados premium que capturan cada gesto y accesorio icónico con fidelidad absoluta."
+                    images={influencerImages}
+                    align="right"
+                />
+
+                <ProductSpotlight
                     title="Cabezón Temático - Bad Bunny"
                     description="La pieza central. Iconografía urbana y texturas hiper-realistas llevadas al volumen monumental."
                     images={badBunnyImages}
@@ -67,28 +96,28 @@ export default function Catalog() {
                     title="Sinergia Corporal"
                     description="Una composición desafiante a la gravedad. Cuerpos entrelazados en un arco de tensión estética."
                     images={bodiesImages}
-                    align="right"
+                    align="left"
                 />
 
                 <ProductSpotlight
                     title="Jaguar Digital - Neon Soul"
                     description="Fusión cyberpunk. Facetas doradas y luz magenta interna para una presencia imponente."
                     images={jaguarPinkImages}
-                    align="left"
+                    align="right"
                 />
 
                 <ProductSpotlight
                     title="Pantera Geométrica - Prism"
                     description="Agresividad natural domada por geometría digital. Facetas reflectantes y acentos neón."
                     images={pantherSilverImages}
-                    align="right"
+                    align="left"
                 />
 
                 <ProductSpotlight
                     title="Maneki Neko - Dark Matter"
                     description="El gato de la suerte reimaginado. Estética oscura para espacios que rompen reglas."
                     images={luckyCatImages}
-                    align="left"
+                    align="right"
                 />
 
             </div>
