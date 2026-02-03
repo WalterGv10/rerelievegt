@@ -17,11 +17,21 @@ export default function Home() {
             />
 
             <Hero />
-            <Differentiator />
-            <Applications />
-            <Process />
-            <Materials />
-            <ClosingCTA />
+            <div className="section-below-fold">
+                <Differentiator />
+            </div>
+            <div className="section-below-fold">
+                <Applications />
+            </div>
+            <div className="section-below-fold">
+                <Process />
+            </div>
+            <div className="section-below-fold">
+                <Materials />
+            </div>
+            <div className="section-below-fold">
+                <ClosingCTA />
+            </div>
         </div>
     );
 }

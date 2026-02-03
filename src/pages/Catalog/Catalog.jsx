@@ -1,3 +1,6 @@
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SEO from '../../components/SEO';
 import CatalogIntro from '../../components/CatalogIntro/CatalogIntro';
 import ProductCard from '../../components/ProductCard/ProductCard';
@@ -5,7 +8,29 @@ import CatalogClosing from '../../components/CatalogClosing/CatalogClosing';
 import ProductSpotlight from '../../components/ProductSpotlight/ProductSpotlight';
 import { products } from '../../data/products';
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Catalog() {
+    const gridRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.from(".product-card-anim", {
+                y: 60,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.1,
+                ease: "power4.out",
+                scrollTrigger: {
+                    trigger: gridRef.current,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        }, gridRef);
+        return () => ctx.revert();
+    }, []);
+
     // Bad Bunny Data
     const badBunnyImages = [
         { image: '/catalog/bad-bunny/front.jpg', text: 'Benito' },
@@ -129,11 +154,13 @@ export default function Catalog() {
             </div>
 
             {/* Grid */}
-            <section className="px-3 sm:px-6 md:px-8 pb-12 sm:pb-16 bg-black/50">
+            <section ref={gridRef} className="px-3 sm:px-6 md:px-8 pb-12 sm:pb-16 bg-black/50 overflow-hidden">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 lg:gap-8">
                         {products.map((product) => (
-                            <ProductCard key={product.id} product={product} />
+                            <div key={product.id} className="product-card-anim opacity-0">
+                                <ProductCard product={product} />
+                            </div>
                         ))}
                     </div>
                 </div>

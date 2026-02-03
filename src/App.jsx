@@ -1,11 +1,21 @@
+import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import Home from './pages/Home/Home';
-import Catalog from './pages/Catalog/Catalog';
-import Funkos from './pages/Funkos/Funkos';
-import Contact from './pages/Contact/Contact';
 import Waves from './components/Waves/Waves';
 import './styles/theme.css';
+
+// Lazy loading pages for better performance (Velocity Skill)
+const Home = lazy(() => import('./pages/Home/Home'));
+const Catalog = lazy(() => import('./pages/Catalog/Catalog'));
+const Funkos = lazy(() => import('./pages/Funkos/Funkos'));
+const Contact = lazy(() => import('./pages/Contact/Contact'));
+
+// Loading fallback
+const PageLoader = () => (
+    <div className="fixed inset-0 flex items-center justify-center bg-black z-[100]">
+        <div className="w-12 h-12 border-4 border-amber-100/20 border-t-amber-100 rounded-full animate-spin" />
+    </div>
+);
 
 function App() {
     return (
@@ -29,12 +39,14 @@ function App() {
             <Navbar />
 
             <main className="relative z-10">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/catalogo" element={<Catalog />} />
-                    <Route path="/funkos" element={<Funkos />} />
-                    <Route path="/contacto" element={<Contact />} />
-                </Routes>
+                <Suspense fallback={<PageLoader />}>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/catalogo" element={<Catalog />} />
+                        <Route path="/funkos" element={<Funkos />} />
+                        <Route path="/contacto" element={<Contact />} />
+                    </Routes>
+                </Suspense>
             </main>
         </div>
     );

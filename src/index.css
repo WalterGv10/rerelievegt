@@ -18,9 +18,26 @@
 body {
     margin: 0;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
     overflow-x: hidden;
-    background-color: #242424;
+    background-color: #050505;
+    /* Blacker background for contrast and efficiency */
+}
+
+/* Performance Utilities (Velocity Skill) */
+.section-below-fold {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 500px;
+    /* Guess for section height */
+}
+
+.will-change-transform {
+    will-change: transform;
+}
+
+.gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 #root {

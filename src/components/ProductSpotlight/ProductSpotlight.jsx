@@ -1,21 +1,45 @@
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import CircularGallery from '../CircularGallery/CircularGallery';
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function ProductSpotlight({ title, description, images, align = 'left' }) {
+    const sectionRef = useRef(null);
+    const contentRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.from(contentRef.current, {
+                x: align === 'right' ? 60 : -60,
+                opacity: 0,
+                duration: 1.5,
+                ease: "power4.out",
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        }, sectionRef);
+        return () => ctx.revert();
+    }, [align]);
+
     // Fill images array if it has few items to create a better circular effect
-    // We aim for at least 8 items for a smooth loop
     const filledImages = images.length < 8
         ? [...images, ...images, ...images, ...images, ...images].slice(0, 10)
         : images;
 
     return (
-        <section className="relative w-full py-16 bg-[#0a0a0a] border-b border-white/5 last:border-0 overflow-hidden">
+        <section ref={sectionRef} className="relative w-full py-16 bg-[#0a0a0a] border-b border-white/5 last:border-0 overflow-hidden">
             <div className="container-padding max-w-[1920px] mx-auto">
 
                 {/* Header */}
-                <div className={`text-center mb-8 ${align === 'right' ? 'md:text-right' : 'md:text-left'} md:px-12`}>
+                <div ref={contentRef} className={`text-center mb-8 ${align === 'right' ? 'md:text-right' : 'md:text-left'} md:px-12`}>
                     <h2 className="text-fluid-h2 font-light text-white tracking-tight drop-shadow-xl inline-block relative">
                         {title}
-                        <span className={`block h-1 w-1/3 bg-white/20 mt-2 ${align === 'right' ? 'ml-auto' : 'mr-auto'}`}></span>
+                        <span className={`block h-1 w-1/3 bg-amber-400/40 mt-2 ${align === 'right' ? 'ml-auto' : 'mr-auto'}`}></span>
                     </h2>
                     <p className={`mt-4 text-fluid-body text-white/70 max-w-xl leading-relaxed ${align === 'right' ? 'ml-auto' : 'mr-auto'}`}>
                         {description}
